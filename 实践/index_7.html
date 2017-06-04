@@ -1,0 +1,683 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>实践七</title>
+<style>
+*{
+	margin:0;
+	padding:0;
+	}
+body{
+	min-width:1280px;
+	background:#fff;
+	}
+/*头部*/	
+#header{
+	height:40px;
+	width:inherit;
+	line-height:36px;
+	overflow:hidden;
+	}	
+	/* 头部logo*/	
+	#header>img{
+		height:30px;
+		float:left;
+		padding:5px 10px 5px 50px;
+		}
+	#header h1{
+		font-size:19px;
+		float:left;
+		}
+	/*导航*/	
+	#header ul{
+		float:right;
+		list-style:none;
+		margin-right:10px;
+		}
+		#header ul li{
+			display:inline-block;
+			}
+		#header ul li a{
+			text-decoration:none;
+			color:#96989E;
+			font-size:14px;
+			display:block;
+			padding:0 10px;
+			margin-left:5px;
+			}
+		#header ul li a img{
+			height:18px;
+			padding-right:8px;
+			}
+		#header ul li .active{
+			border-bottom:3px solid #E74F4D;
+			color:#E74F4D;
+			}
+		#header ul li .login{
+			color:#E74F4D;
+			}
+/*横幅*/
+#banner{
+	background:url("img/7_2.jpg")  no-repeat;
+	background-size:cover;
+	}
+	#banner .mask{
+		background:rgba(0,0,0,0.4);
+		height:inherit;
+		padding-left:22%;
+		color:#fff;
+		}
+	#banner h2{		
+		font-size:50px;
+		padding-top:24%;
+		font-weight:normal;
+		}
+	#banner p{
+		width:22%;
+		margin:15px 0;
+		}
+	#banner button{
+		width:24%;
+		height:40px;
+		background:#E74F4D;
+		border:none;
+		margin:30px 0 28% 0;
+		color:#fff;
+		font-size:18px;
+		line-height:40px;
+		letter-spacing:3px;
+		box-shadow:5px -5px 15px #000;
+		}
+/*栏目*/
+#column{
+	width:1100px;
+	margin:0 auto;
+	overflow:hidden;
+	}
+	#column div{
+		width:25%;
+		float:left;
+		text-align:center;
+		padding:40px 0;
+		}
+	#column img{
+		width:21%;
+		}
+	#column p{
+		margin:25px 0;
+		padding:0 15%;
+		border-right:3px solid #ddd;
+		}
+	#column p.column_bor{
+		border:none;
+		}
+/*logo*/
+#logo{
+	width:100%;
+	padding:50px 0;
+	background:#EDEDEC;
+	text-align:center;
+	}
+	#logo h2{
+		color:#A1A1A1;
+		font-size:32px;
+		font-weight:normal;
+		padding-top:20px;
+		}
+/*地图搜索*/
+#map{
+	background:url("img/7_17.jpg") no-repeat;
+	background-size:cover;
+	}
+	#map .mask{
+		height:inherit;
+		background:rgba(0,0,0,0.4);
+		padding:40px 0;
+		color:#fff;
+		text-align:center;
+		}
+	#map h3{
+		font-weight:normal;
+		font-size:18px;
+		}
+	#map i{
+		display:block;
+		margin:10px auto 20px;
+		width:30px;
+		border-top:2px solid #fff;
+		}
+	#map p{
+		font-size:12px;
+		}
+	#map form{
+		margin: 20px 0 50px;
+		}
+	#map form select,#map form button{
+		width:15%;
+		height:34px;
+		margin:15px;
+		border:none;
+		}
+	#map form select option{
+		background:#E3E3E4;
+		padding:5px 0;
+		}
+	#map form button{
+		background:#BE4E48;
+		}
+/*相册集*/
+#imgs{
+	background:#F7F7F7;
+	text-align:center;
+	padding:40px 0;	
+	}
+	#imgs>div{
+		display:inline-block;
+		margin:0 auto;
+		overflow:hidden;
+		}
+	#imgs .imgs_photo{
+		float:left;
+		margin:20px;		
+		}
+	#imgs .imgs_photo img{
+		border:1px solid #ddd;
+		box-shadow:3px 3px 7px #ccc;
+		padding:5px;
+		background:#fff;
+		}
+	#imgs .imgs_photo p{
+		font-size:12px;
+		margin:8px 0;
+		}
+	#imgs .imgs_photo p b{
+		display:block;
+		font-size:14px;
+		margin-bottom:5px;
+		}
+	#imgs .imgs_photo p b.imgs_txt{
+		letter-spacing:32px;
+		font-size:20px;
+		text-indent:32px;
+		}
+/*内容*/				
+#container{
+	display:table;
+	width:100%;
+	}
+	/*左图*/		
+	#container .con-img{
+		display:table-cell;
+		width:66%;
+		position:relative;
+		}
+	#container .con-img img{
+		width:100%
+		}
+	/*左图蒙版*/		
+	#container .con-img .mask{
+		position:absolute;
+		top:0;
+		left:0;
+		right:0;
+		bottom:0;
+		background:rgba(0,0,0,0.3);
+		color:#fff;
+		text-align:center;
+		}
+		/*图内文字*/		
+		#container .con-img div h3{
+			font-size:40px;
+			font-weight:normal;
+			padding-top:15%;
+			}
+		#container .con-img div b{
+			font-size:90px;
+			}
+		#container .con-img div p{
+			font-size:14px;
+			margin-bottom:5px;
+			}
+		#container .con-img div i{
+			font-style:normal;
+			font-size:13px;
+			}
+	/*右文字*/		
+	#container .con-txt{
+		display:table-cell;
+		vertical-align:middle;	
+		padding:0 6%;
+		position:relative;
+		}
+	/*小箭头*/		
+	#container .con-txt i{
+		display:inline-block;
+		border-width:15px;
+		border-style:solid;
+		border-color:transparent #fff transparent transparent;
+		position:absolute;
+		top:50%;
+		right:100%;
+		}
+	#container .con-txt h3{
+		text-align:center;
+		font-size:22px;
+		}
+	#container .con-txt h3 em{
+		font-style:normal;
+		color:#E74F4D;
+		}
+	#container .con-txt p{
+		margin:20px 0;
+		line-height:180%;
+		color:#DCDCDC;
+		font-size:14px;
+		}
+	#container .con-txt button{
+		width:140px;
+		height:35px;
+		border:1px solid #E74F4D;
+		background:#fff;
+		color:#E74F4D;
+		display:block;
+		margin:35px auto 0;
+		}
+		
+/*查看更多*/		
+#more{
+		display:table;
+		width:100%;
+	}
+	#more div{
+		display:table-cell;
+		vertical-align:middle;
+		text-align:center;
+		color:#4E4F4F;
+		}	
+	/*左红底*/		
+	#more .more_red{
+		background:#E7504D;
+		color:#fff;
+		width:33%
+		}
+	/*文字*/		
+	#more .more_1 h4{
+		font-size:18px;
+		font-weight:normal;
+		margin:5px 0;
+		}
+	#more .more_1 p{
+		font-size:14px;
+		}
+	#more .more_1 i{
+		display:block;
+		border:1px solid black;
+		width:40px;
+		margin:20px auto;
+		}
+	#more .more_red i{
+		border:1px solid #fff;
+		}
+	#more .more_1 button{
+		width:130px;
+		height:35px;
+		background:rgba(0,0,0,0);
+		border:1px solid #E7504D;
+		color:#E7504D;
+		}
+	#more .more_red button{
+		color:#fff;
+		border:1px solid #fff;
+		}
+	/*右图*/		
+	#more .more_2{
+		width:34%;
+		position:relative;
+		}		
+		#more .more_2 img{
+			width:100%;
+			}
+		/*蒙版*/		
+		#more .more_2 .mask{
+			position:absolute;
+			top:0;
+			left:0;
+			right:0;
+			bottom:0;
+			background:rgba(0,0,0,0.3);
+			}
+		/*小箭头*/		
+		#more .more_2 i{
+			display:inline-block;
+			border:15px solid red;
+			border-color:transparent transparent transparent #fff;
+			position:absolute;
+			top:50%;
+			left:0;
+			}
+/*加入我们*/
+#join{
+	width:1000px;
+	margin:100px auto;
+	overflow:hidden;
+	}	
+	#join>h4{
+		text-align:center;
+		font-size:20px;
+		font-weight:normal;
+		}
+	#join>i{
+		width:30px;
+		display:block;
+		margin:5px auto;
+		border-top:2px solid #E7504D;
+		}
+	#join>p{
+		font-size:14px;
+		color:#B0B0B0;
+		margin:0 25%;
+		}	
+		
+	#join .join_left{
+		width:32%;
+		float:left;
+		}
+		.join_left h4{
+		padding:40px 0 8px;
+		}
+		.join_left p{
+			margin:16px 0 8px;
+			font-size:14px;
+			color:#B0B0B0;
+			}
+		.join_left em{
+			float:right;
+			text-align:right;
+			font-style:normal;
+			font-size:13px;
+			margin-top:-3px;
+			padding-right:10px;
+			}
+		.join_left  i{
+			float:right;
+			width:6px;
+			height:6px;
+			border:2px solid #999;
+			border-color:transparent #999 #999 transparent;
+			transform:rotate(45deg);
+			margin-right:5px;
+			}
+	#join form{
+		width:64%;
+		float:right;
+		padding-top:25px;
+		}
+		#join form div{
+			width:287px;
+			padding:10px 5px;
+			background:#EDEDEE;
+			color:#777374;
+			display:inline-block;
+			margin-left:20px;
+			margin-top:15px;
+			font-size:14px;
+			}
+		#join form div input{
+			border:none;
+			background:#EDEDEE;
+			}
+		#join form .form_wid{
+			width:607px;
+			min-height:120px;
+			padding:10px 5px;
+			background:#EDEDEE;
+			color:#777374;
+			}
+		#join form .form_wid textarea{
+			max-width:605px;
+			min-width:605px;
+			border:none;
+			background:#EDEDEE;
+			}
+		#join form button{
+			margin:15px 0 0 20px;
+			width:100%;
+			background:#EDEDEE;
+			border:none;
+			padding:12px 0;
+			}
+			
+#relation{
+	background:#32363E;
+	color:#ddd;
+	text-align:center;
+	padding-top:60px;
+	}
+	#relation h4{
+		font-weight:normal;
+		font-size:16px;
+		}
+	#relation p{
+		font-size:12px;
+		padding:10px 30%;
+		}
+	#relation form{
+		width:500px;
+		margin:20px auto;
+		overflow:hidden;
+		}	
+	#relation form input{
+		width:350px;
+		height:35px;
+		padding:0 10px;
+		float:left;
+		}
+	#relation form button{
+		width:120px;
+		height:37px;
+		float:left;
+		border:none;
+		background:#6F7178;
+		}
+	#relation .relation_img{
+		padding-bottom:50px;
+		}			
+		#relation div img{
+			margin:0 5px;
+			}
+	#relation #footer{
+		height:50px;
+		background:#2F3039;
+		overflow:hidden;
+		}	
+	#relation #footer span,#relation #footer i{
+		float:left;
+		line-height:60px;
+		font-size:12px;
+		padding:0 50px  0 90px;
+		}
+	#relation #footer i{
+		float:right;
+		}
+			
+</style>
+</head>
+
+<body>
+<!--头部-->
+<div id="header">
+    <img src="img/7_1.png">
+    <h1>新世界</h1>
+    <ul>
+        <li><a href="#" class="active">首页</a></li>
+        <li><a href="#">最新活动</a></li>
+        <li><a href="#">项目介绍</a></li>
+        <li><a href="#">爱心社区</a></li>
+        <li><a href="#">关于我们</a></li>
+        <li><a href="#" class="login"><img src="img/7_login.jpg"/>登录</a></li>
+    </ul>        
+</div>
+<!--横幅-->
+<div id="banner">
+    <div class="mask">
+        <h2>Time of new life</h2>
+        <p>新时代，年轻的人们让我们一起  体验新生活，享受新生活</p>
+        <button type="button">开始体验</button>
+    </div>
+</div>
+<!--栏目-->
+<div id="column">
+    <div>
+        <img src="img/7_24 (2).png">
+        <p>打造全新世界观，让你更 爱你的生活</p>
+    </div>
+    <div>
+        <img src="img/7_24 (3).png">
+        <p>丰富多彩的公益活动，发 挥新世界的主人公意识</p>
+    </div>
+    <div>
+        <img src="img/7_24 (4).png">
+        <p>时尚的新理念，超前体验 未知的生活</p>
+    </div>
+    <div>
+        <img src="img/7_24 (1).png">
+        <p class="column_bor">完善的培养机制，培养你 全新的世界观</p>
+    </div>
+</div>
+<!--logo-->
+<div id="logo">
+    <img src="img/7_logo.jpg"/>
+    <h2>关于新世界，你不知道的还有什么？</h2>
+</div>
+<!--搜索地图-->
+<div id="map">
+    <div class="mask">
+        <h3>查找新世界城市活动信息</h3>
+        <i></i>
+        <p>每个城市的有不同的活动信息，请自主查询您所需要了解的城市</p>
+        <form method="get" name="form">
+            <select>
+                <option>中国</option>
+            </select>
+            <select >
+                <option>天津</option>
+                <option>上海</option>
+                <option>北京</option>
+                <option>深圳</option>
+            </select>
+            <select>
+                <option>111</option>
+                <option>222</option>
+                <option>333</option>
+                <option>444</option>
+            </select>
+            <button type="button">搜索</button>
+        </form>       
+    </div>
+</div>
+<!--相册集-->
+<div id="imgs">
+	<div>
+        <div class="imgs_photo">
+            <img src="img/7_7.jpg"/>
+            <p><b>北京活动</b>新社区大联盟</p>
+        </div>
+        <div class="imgs_photo">
+            <p><b class="imgs_txt">上海活动</b>夜上海新景观探索</p>
+            <img src="img/7_8.jpg"/>  
+        </div>
+        <div class="imgs_photo">
+            <img src="img/7_9.jpg"/>
+            <p><b>香港活动</b>奢侈消费大派送</p>
+        </div>
+        <div class="imgs_photo">
+            <img src="img/7_10.jpg"/>
+            <p><b>深圳活动</b>全新海岸线观点站</p>
+        </div>
+	</div>
+</div>
+<!--内容-->
+<div id="container">
+	<div class="con-img">
+    	<img src="img/7_11.jpg"/>
+        <div class="mask">
+        	<h3>新世界</h3>
+            <b>TIME</b>
+            <p>@新世界-北京</p>
+            <i>2017-06-01</i>
+        </div>
+    </div>
+    <div class="con-txt">
+    	 <i></i>
+    	<h3>新世界 / <em>01</em></h3>
+        <p>新世界是个新世界新世界是个新世界新世界是个新世界 新世界是个新世界新世界是个新世界新世界是个新世界 新世界是个新世界新世界是个新世界新世界是个新世界 新世界是个新世界新世界是个新世界</p>
+        <button type="button">更多详情</button>
+    </div>
+</div>
+<!--查看更多-->
+<div id="more">
+	<div class="more_1 more_red">
+    	<h4>新时代</h4>
+        <p>关于爱生活的我们</p>
+        <i></i>
+        <button type="button">查看更多</button>
+    </div>
+    <div class="more_1">
+    	<h4>新时代</h4>
+        <p>关于爱生活的我们</p>
+        <i></i>
+        <button type="button">查看更多</button>
+    </div>
+    <div class="more_2">
+    	<img src="img/7_12.png"/>
+        <div class="mask"><i></i></div>        
+    </div>
+</div>
+<!--加入我们-->
+<div id="join">
+	<h4>成为我们的志愿者</h4>
+    <i></i>
+    <p>新世界的大家庭需要每一个爱生活的人的加入，如果你够年轻，有梦想，有激情 那就不要犹豫，快来加入我们，成为改变所有人生活的人 </p>
+    <div class="join_left">
+    	<h4>新世界志愿者协议</h4>
+        <p>加入新世界志愿者的人员必须遵守中华人民共共和国的 相关法律法规，并且本着平等资源的原则 ......</p>
+        <em>more</em><i>&nbsp;</i>
+        
+        <h4>新世界志愿者权利</h4>
+        <p>加入新世界志愿者的人员必须遵守中华人民共共和国的 相关法律法规，并且本着平等资源的原则 ...... 副本</p>
+        <em>more</em><i>&nbsp;</i>
+        <h4>更多条款</h4>
+        <em>more</em><i>&nbsp;</i>
+    </div>
+    <form>
+    	<div>姓名：<input type="text" name="yourName"/></div>
+        <div>年龄：<input type="text" name="yourName"/></div>
+        <div>联系方式：<input type="text" name="yourName"/></div>
+        <div>联系地址：<input type="text" name="yourName"/></div>
+        <div class="form_wid"><p>请简单的描述您梦想的生活：</p><textarea></textarea></div>
+        <button type="submit">提交申请</button>
+    </form>  
+</div>
+<!--联系我们-->
+<div id="relation">
+	<h4>联系我们</h4>
+    <p>为了更好的获取我们最新的产品资讯，您可以留下您的电子邮箱快速订阅我们的产品资讯 也可以通过以下任何方式关注我们动态</p>
+    <form>
+    	<input type="text" value="someone@email.com"/>
+        <button type="submit">提交</button>
+    </form>
+    <div class="relation_img">
+   		<img src="img/7_25 (1).png"/> 
+        <img src="img/7_25 (2).png"/> 
+        <img src="img/7_25 (3).png"/> 
+        <img src="img/7_25 (4).png"/> 
+    </div>
+    <div id="footer">
+    	<span>@2016新世界</span>
+        <i>Back to top</i>
+    </div>
+</div>
+</body>
+</html>
+
