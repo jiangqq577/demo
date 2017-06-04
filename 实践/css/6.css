@@ -1,0 +1,254 @@
+@charset "utf-8";
+/* CSS Document */
+*{
+	padding:0;
+	margin:0;
+	}
+#header,#con-top,#con-mid,#con-bot,#footer{
+	width:890px;
+	margin:35px auto 0;
+	}
+/*头部*/
+#header{
+	height:50px;
+	border-bottom:2px solid #333;
+	margin-top:0;
+	}
+	#header span{
+		float:left;
+		background:#D45D5C;
+		padding:27px 15px 3px 8px;
+		font-size:15px;
+		color:#fff;
+		}
+	#header i{
+		float:right;
+		margin:30px 5px 2px 0;
+		font-size:14px;
+		color:#D45D5C;
+		}
+
+/*内容上*/
+#con-top{
+	}
+	#con-top img{
+		width:640px;
+		box-shadow:3px 3px 8px #999;
+		}
+	/*内容上--右 文字部分*/
+	#con-top div{
+		display:inline-block;
+		width:210px;
+		float:right;
+		border-top:2px solid #D45D5C;
+		padding-top:12px;
+		}
+	#con-top p{
+		text-transform:uppercase;
+		display:inline-block;
+		border-bottom:2px solid #444;
+		margin-top:8px;
+		}
+	#con-top i{
+		font-size:13px;
+		margin-top:3px;
+		display:block;
+		}
+	#con-top b{
+		display:block;
+		font-size:94px;
+		font-style:italic;
+		color:#75B86B;
+		}
+	#con-top span{
+		font-size:56px;
+		color:#CC8091;	
+		display:inline-block;	
+		}
+	#con-top em{
+		display:inline-block;
+		font-style:normal;
+		color:#CC8091;
+		margin-left:4px;
+		font-size:20px;
+		}
+	#con-top em small{
+		color:#999;
+		font-size:12px;
+		}
+
+/*内容中*/
+#con-mid{
+	overflow:hidden;
+	}
+	#con-mid div{
+		float:left;
+		width:25%;
+		margin-right:40px;
+		color:#666;
+		}
+	#con-mid h3,#con-mid h4,#con-mid h5{
+		text-transform:uppercase;
+		display:inline-block;
+		font-size:16px;		
+		}
+	/*内容中--标题颜色*/
+	#con-mid h3{border-bottom:2px solid #418C59;color:#418C59;}
+	#con-mid h4{border-bottom:2px solid #D2994F;color:#D2994F;}
+	#con-mid h5{border-bottom:2px solid #CC7680;color:#CC7680;}
+	/*内容中--文本*/
+	#con-mid p{
+		font-size:14px;
+		line-height:140%;
+		margin-top:10px;
+		margin-bottom:15px;
+		}
+	#con-mid em{
+		display:block;
+		font-style:normal;
+		font-size:15px;
+		}
+	#con-mid em i{
+		color:#E6B1B0;
+		}
+
+/*内容下*/
+#con-bot{
+	overflow:hidden;
+	}
+	/*内容下--左*/
+	.bot-left{
+		float:left;
+		width:420px;
+		}
+	.bot-left h2{
+		font-size:28px;
+		}
+	/*the*/
+	.bot-left h2 b{
+		font-style:italic;
+		color:#F5E327;
+		font-size:60px;
+		margin-right:15px;
+		}
+	/*内容下--文字部分*/
+	.bot-left div{
+		border-top:2px solid #333;
+		margin-top:15px;
+		padding:15px 0;
+		}
+		/*前*/
+	.bot-left div b{
+		font-size:65px;
+		color:#F5E327;
+		font-weight:normal;
+		float:left;
+		padding-right:8px;
+		}
+		/*文字*/
+	.bot-left div p{
+		font-size:15px;
+		color:#777;
+		padding-top:15px;
+		line-height:150%;
+		}
+	.bot-left div p img{
+		float:right;
+		padding-top:10px;
+		}
+
+	/*内容下--右*/	
+	.bot-right{
+		float:right;
+		width:445px;
+		color:#666;
+		}
+	/*图片框*/
+	.bot-right .bot-animation{
+		width:455px;
+		position:relative;
+		}
+	.bot-right  .bot-animation img{
+		width:455px;
+		}
+         /*图片底部滑动效果*/
+	.bot-right  .bot-animation .hide{
+		position:absolute;
+		bottom:0;
+		left:0;
+		background:rgba(0,0,0,0.5);
+		width:100%;
+		height:60px;
+		line-height:60px;
+		display:none;
+		}
+	.bot-right  .bot-animation .hide b{
+		border-left:4px solid #72B16A;
+		font-size:26px;
+		color:#fff;
+		margin-left:20px;
+		padding:0 10px;
+		}
+	.bot-right  .bot-animation .hide i{
+		color:#72B16A;
+		}
+	.bot-right .bot-animation:hover .hide{
+		display:block;
+		}
+		
+	/*内容下--右  文字部分*/			
+	.bot-right .bot-b{
+		background:#EEEDD6;
+		margin-top:25px;
+		padding-top:30px;
+		overflow:hidden;
+		}
+	.bot-right div ul{list-style:none;}
+	.bot-right div ul li{padding:0 5px 20px 18px;letter-spacing:2px;}
+	.bot-right div ul li i{
+		display:inline-block;
+		border-width:6px;
+		border-style:solid;
+		border-color: transparent transparent transparent #000;
+		}
+	.bot-right div ul li em{
+		font-size:14px;
+		font-style:normal;
+		}
+	/*内容下--右 文字 红框部分*/
+	.bot-right .bot_txt{
+		width:270px;
+		background:#D45D5C;
+		color:#fff;
+		padding:25px 0;
+		overflow:hidden;
+		float:left
+		}
+	.bot-right .bot_txt span{
+		font-size:98px;
+		float:left;
+		width:60px;
+		margin:0 8px;
+		}
+	.bot-right .bot_txt p{
+		border-left:4px solid #fff;
+		margin-left:70px;
+		margin-top:28px;
+		padding-left: 8px;
+		}
+	.bot-right>div>p{
+		width:160px;
+		float:right;
+		margin-top:30px;
+		}
+
+/*底部*/
+#footer{
+	border-top:1px solid #333;
+	height:40px;
+	color:#D45D5C;
+	font-size:14px;
+	text-align:right;
+	padding:3px 5px;
+	}
+

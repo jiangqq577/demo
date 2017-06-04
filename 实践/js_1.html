@@ -1,0 +1,138 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>表单验证一</title>
+</head>
+<style>
+*{padding:;margin:0;}
+form{
+	width:800px;
+	border:1px solid #333;
+	border-radius:10px;
+	margin:30px auto;
+	padding:30px;
+	}
+	form span{
+		font-size:18px;
+		display:inline-block;
+		width:80px;
+		text-align:center;
+		}
+	form input{
+		width:400px;
+		height:35px;
+		border-radius:8px;
+		margin:30px 10px 5px;
+		border:1px solid #ccc;
+		}
+	form button{
+		width:90px;
+		height:37px;
+		}
+	form p{
+		margin-left:100px;
+		font-size:14px;
+		color:#999;
+		}
+</style>
+
+<body>
+
+<form method="get" action="">
+	<span>账号</span>
+    <input type="text" name="id" id="NC"/>
+    <button type="button" onclick="nickname()">验证</button>
+    <p id="mess">必填，长度为4~16字符</p>
+    
+    <span>密码</span>
+    <input type="password" name="id" id="pass1"/>
+    <button type="button" onclick="passWord1()">验证</button>
+    <p id="mess_pass1">密码长度为10~16字母数字组合</p>
+    <span>确认密码</span>
+    <input type="password" name="id" id="pass2"/>
+    <button type="button" onclick="passWord2()">验证</button>
+    <p id="mess_pass2"></p>
+</form>
+
+<script>
+//验证昵称
+function nickname(){
+	var input_ID=document.getElementById("NC");
+	var value=input_ID.value;
+	var mess=document.getElementById("mess");
+	//判断是否为空
+	if(value==""){
+		mess.innerHTML="昵称不能为空";
+		mess.style.color="red";
+		input_ID.style.borderColor="red";
+		}
+	//判断长度是否符合
+	if(value.length>16||value.length<4&&value.length>=1){
+		mess.innerHTML="长度为4~16个字符数字";
+		mess.style.color="red";
+		}
+	//判断是否有空白
+	if(value.indexOf(" ")!=-1){
+		mess.innerHTML="含有空白字符";
+		mess.style.color="red";
+		}
+	//格式正确
+	if(value.length>=4&&value.length<=16&&value.indexOf(" ")==-1){
+		mess.innerHTML="格式正确";
+		input_ID.style.borderColor="#81C86B";
+		mess.style.color="#81C86B";
+		}
+	}
+//验证密码
+function passWord1(){
+	var pass1=document.getElementById("pass1");
+	var pass_value1=pass1.value;
+	var mess1=document.getElementById("mess_pass1");
+	var num=/^\d+$/;				//正则判断是否全为数字
+	var str=/^[a-zA-Z]+$/;		//正则判断是否全为字母
+	//长度不符
+	if(pass_value1.length<10||pass_value1.length>16){
+		mess1.innerHTML="密码长度不符";
+		mess1.style.color="red";
+		}
+	//含有空白符
+	else if(pass_value1.indexOf(" ")!=-1){
+		mess1.innerHTML="密码不能含有空白符";
+		mess1.style.color="red";
+		}
+	//长度符合
+	else if(pass_value1.length>=10&&pass_value1.length<=16){
+		//若密码为纯数字或纯字母
+		if(num.test(pass_value1)||str.test(pass_value1)){
+			mess1.innerHTML="密码太单一，请输入字母数字组合的密码";
+			mess1.style.color="red";
+			}
+		//格式正确
+		else{
+			mess1.innerHTML="格式正确，请输入确认密码";
+			mess1.style.color="#81C86B";
+			}
+		}
+	}
+//确认密码
+function passWord2(){
+	var pass1=document.getElementById("pass1");
+	var pass2=document.getElementById("pass2");	
+	var pass_value1=pass1.value;
+	var pass_value2=pass2.value;
+	var mess1=document.getElementById("mess_pass1");
+	var mess2=document.getElementById("mess_pass2");
+	if(pass_value1==pass_value2){
+		mess2.innerHTML="两次密码一致";
+		mess2.style.color="#81C86B";
+		}
+	else{
+		mess2.innerHTML="两次密码不一致";
+		mess2.style.color="red";
+		}
+	}
+</script>
+
+</body>
+</html>

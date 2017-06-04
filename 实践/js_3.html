@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style>
+*{padding:0;margin:0;}
+form{
+	border:1px solid black;
+	width:600px;
+	margin:50px auto;
+	border-radius:10px;
+	padding-bottom:30px;
+	}
+form #radio{
+	font-size:16px;
+	margin:30px;
+	}
+	#radio input{
+		margin-left:120px;
+		margin-right:10px;
+		}
+form span{
+	display:inline-block;
+	width:80px;
+	margin-left:30px;
+	text-align:center;
+	}
+form #inschool{}
+	#inschool select{
+		width:150px;
+		height:26px;
+		}
+form #outschool{display:none;}
+	#outschool input{
+		width:350px;
+		height:30px;
+		}
+</style>
+</head>
+
+<body>
+<form method="get" action="" name="form">
+	<div id="radio">
+    	<input type="radio" name="work" id="in" checked="checked"/>在校生
+        <input type="radio" name="work" id="out">非在校生
+    </div>
+    <div id="inschool">
+    	<span>城市：</span>
+    	<select id="city">
+        	<option>——请选择所在城市——</option>
+            <option>北京</option>
+            <option>上海</option>
+            <option>福州</option>
+            <option>厦门</option>
+        </select>
+        <span>学校：</span>
+        <select id="school">
+        	<option>——请选择所在学校——</option>
+        </select>
+    </div>
+    <div id="outschool">
+    	<span>就业单位：</span>
+        <input type="text"/>
+    </div>
+</form>
+
+<script>
+function show_in(){
+	document.getElementById("inschool").style.display="block";
+	document.getElementById("outschool").style.display="none";
+	}
+
+function show_out(){
+	document.getElementById("inschool").style.display="none";
+	document.getElementById("outschool").style.display="block";
+	}
+
+function show_select(){
+	var schoolName=[
+			["北京111","北京222","北京333","北京444"],
+			["上海111","上海222","上海333","上海444","上海555"],
+			["福州111","福州222","福州333","福州444","福州555","福州666"],
+			["厦门111","厦门222","厦门333"]
+		]
+	var city=document.getElementById("city");
+	var school=document.getElementById("school");
+	
+	var school_option=schoolName[city.selectedIndex-1];
+	
+	school.length=1;
+	
+	for(var i=0;i<school_option.length;i++){
+		school[i+1]=new Option(school_option[i],school_option[i])
+		}
+	}
+	
+function All(){
+	document.getElementById("in").onclick=show_in;
+	document.getElementById("out").onclick=show_out;
+	document.getElementById("city").onchange=show_select;
+	}
+All();
+</script>
+</body>
+</html>

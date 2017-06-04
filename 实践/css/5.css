@@ -1,0 +1,202 @@
+@charset "utf-8";
+/* CSS Document */
+*{
+	margin:0;
+	padding:0;
+	}
+#header{
+	width:100%;
+	background:#333;
+	overflow:hidden;
+	position:relative;
+	}
+	#header img{
+		height:45px;	
+		margin-left:3%;	
+		}
+	#header ul{
+		list-style:none;
+		float:right;
+		margin-right:15px;
+		line-height:45px;
+		}
+	#header ul li{
+		display:inline-block;
+		padding:0 10px;
+		}
+	#header ul li a{
+		text-decoration:none;
+		display:block;
+		font-size:14px;
+		color:#fff;
+		}
+
+#box{
+	width:94%;
+	margin:0 auto;
+	}
+	#box>form{
+			font-size:13px;
+			padding:0 5px 10px;
+			width:200px;
+			border:1px solid #999;
+			border-radius:8px;
+			box-shadow:6px 6px 5px #999;
+			float:right;
+			}
+		#box>form p{
+			padding:8px
+			}
+		#box>form p i{
+			border-left:3px solid #666;
+			padding-right:8px;
+			}
+		#box>form span{
+			font-size:12px;
+			margin:5px 0 12px;
+			display:block;
+			text-align:center;
+			}
+		#box>form .txt{
+			padding:3px;
+			width:180px;
+			}
+		#box>form .choose{
+			margin-top:12px;
+			}
+			.choose i{
+				font-style:normal;
+				}
+			.choose div{
+				float:right;
+				padding-right:30px;
+				}
+		#box>form button{
+			width:100%;
+			background:#03F;
+			border:none;
+			padding:5px 20px;
+			border-radius:5px;
+			}
+		#box>form textarea{
+			margin:12px auto;
+			padding-top:5px;
+			font-size:13px;
+			}
+/*内容*/
+	.con-top,.con-mid,.con-img,.con-bot{
+		border:1px solid black;
+		border-radius:8px;
+		margin-top:20px;
+		padding:8px 10px;
+		margin-right:230px;
+		overflow:hidden;
+		}
+	.con-top h3,.con-mid h3,.con-bot h3{
+			text-align:center;
+			margin-top:10px;
+			}
+	.con-top p,.con-mid p,.con-bot p{
+		line-height:180%;
+		text-indent:32px;
+		}
+/*日期和作者*/
+		.data{overflow:hidden;width:auto;padding:10px 20px 5px 0;}
+		.data em,.data i{
+			float:right;
+			}
+		.data em{
+			margin-right:10px;
+			}
+/*上*/			
+		.con-top img{
+			float:left;
+			width:30%;
+			margin:20px 20px 10px 5px;
+			border-radius:10px;
+			min-width:100px;
+			}
+/*中*/			
+		.con-mid ul{
+			list-style:none;
+			float:left;
+			margin:10px 5%;
+			}
+		.con-mid ul li{
+			line-height:180%;
+			}
+		.con-mid ul li a{
+			text-decoration:none;
+			display:inline-block;
+			}
+		.con-mid img{
+			width:30%;
+			min-width:170px;
+			margin:10px 5%;
+			border-radius:5px;
+			box-shadow:10px -10px 20px #333;
+			float:right;
+			}	
+/*图片*/
+	.con-img h3{
+		font-size:20px;
+		padding:10px 0 20px 30px;
+		}
+	.con-img .img-box{
+		border:1px solid #999;
+		border-radius:5px;
+		box-shadow:5px 5px 5px #999;
+		width:180px;
+		display:inline-block;
+		margin:0 7px 15px;
+		text-align:center;
+		}
+		.con-img .img-box img{
+			width:94%;
+			margin:5px 3%;
+			}
+/*下*/	
+	.con-bot ol{
+		margin-left:50px;
+		}	
+	.con-bot ol li{
+		line-height:180%;
+		}
+	.con-bot ol li a{
+		text-decoration:none;
+		color:#222;
+		}
+	.con-bot table{
+		width:90%;
+		margin:0 auto;
+		border:1px solid black;
+		text-align:center;
+		}
+		.con-bot table caption{
+			padding:10px 0;
+			}
+		.con-bot th,td{
+			border:1px solid black;
+			padding:5px;
+			}
+@media only screen and (max-width:480px){
+	.con-top,.con-mid,.con-img,.con-bot{
+		width:94%;
+		margin:0 auto;
+		}
+	#box form{
+		width:94%;
+		margin:20px auto;
+		}
+	}
+
+/*版权*/
+#copyright{
+	width:100%;
+	height:50px;
+	line-height:50px;
+	text-align:center;
+	margin-top:20px;
+	color:#fff;
+	background:#333;
+	}
