@@ -1,0 +1,188 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{
+	padding:0;
+	margin:0;
+	}
+#box{
+	background:#610002 url(../img/bg.png) repeat-y;
+	background-size:contain;
+	min-width:1000px;
+	}
+/*头部*/
+	#box .h_title{
+		width:30%;
+		margin:60px 6% 40px 35%;
+		}
+	#box .h_text{
+		width:10%;
+		margin-bottom:40px;
+		}		
+/*导航*/		
+	#nav{
+		background: -webkit-linear-gradient(#880000,#690004,#450509); /* Safari 5.1 - 6.0 */
+    	background: -o-linear-gradient(#880000,#690004,#450509); /* Opera 11.1 - 12.0 */
+    	background: -moz-linear-gradient(#880000,#690004,#450509); /* Firefox 3.6 - 15 */
+    	background: linear-gradient(#880000,#690004,#450509); /* 标准的语法（必须放在最后） */
+		position:relative;
+		}
+		#nav>i{
+			display:block;
+			clear:both;
+			height:2px;
+			background: -webkit-linear-gradient(left,#610002,#A86850,#BA7E13,#EEE6AF,#BA7E13,#A86850,#610002); /* Safari 5.1 - 6.0 */
+   			background: -o-linear-gradient(right, #610002,#A86850,#BA7E13,#EEE6AF,#BA7E13,#A86850,#610002); /* Opera 11.1 - 12.0 */
+    		background: -moz-linear-gradient(right, #610002,#A86850,#BA7E13,#EEE6AF,#BA7E13,#A86850,#610002); /* Firefox 3.6 - 15 */
+    		background: linear-gradient(to right, #610002,#A86850,#BA7E13,#EEE6AF,#BA7E13,#A86850,#610002); /* 标准的语法（必须放在最后）*/
+			}
+		#nav>span{display:block;height:40px;}
+		#nav .nav_img{
+			position:absolute;
+			top:-135%;
+			}
+		#nav .nav_left{
+			right:81%;
+			}
+		#nav .nav_right{
+			left:81%
+			}
+
+
+		#nav .nav_first{
+			list-style:none;
+			width:60%;
+			overflow:hidden;
+			position:absolute;
+			padding:0 7%;			
+			top:-8px;
+			left:13%;
+			}
+		#nav .nav_first>i{
+			float:left;
+			width:2px;
+			height:60px;
+			background: -webkit-linear-gradient(rgba(255,255,255,0),rgba(255,255,255,0.1),rgba(255,255,255,0.7),rgba(255,255,255,0.1),rgba(255,255,255,0)); /* Safari 5.1 - 6.0 */
+   			background: -o-linear-gradient(rgba(255,255,255,0),rgba(255,255,255,0.1),rgba(255,255,255,0.7),rgba(255,255,255,0.1),rgba(255,255,255,0)); /* Opera 11.1 - 12.0 */
+    		background: -moz-linear-gradient(rgba(255,255,255,0),rgba(255,255,255,0.1),rgba(255,255,255,0.7),rgba(255,255,255,0.1),rgba(255,255,255,0)); /* Firefox 3.6 - 15 */
+    		background: linear-gradient(rgba(255,255,255,0),rgba(255,255,255,0.1),rgba(255,255,255,0.7),rgba(255,255,255,0.1),rgba(255,255,255,0)); /* 标准的语法（必须放在最后） */
+			
+			}
+		#nav .nav_first li{
+			float:left;
+			width:13.5%;
+			}	
+		#nav .nav_first li.active{
+			background:url("../img/active.png") no-repeat center center;
+			background-size:100% 100%;
+			}		
+		#nav .nav_first li.active a{
+			color:#000;
+			}
+		#nav .nav_first li a{
+			display:block;
+			text-decoration:none;
+			color:#fff;
+			font-size:13px;
+			text-align:center;		
+			padding-top:15px;	
+			}
+		#nav .nav_first li a p{
+			font-size:7px;
+			font-style:italic;
+			color:#ddd;
+			font-family:"MS Serif", "New York", serif;
+			}
+
+		#nav .nav_second{
+			list-style:none;
+			position:absolute;
+			top:60px;
+			left:13%;
+			width:60%;
+			padding:0 7%;
+			background: -webkit-linear-gradient(left,rgba(255,255,255,0.1),rgba(255,255,255,0.3),rgba(255,255,255,0.6),rgba(255,255,255,0.3),rgba(255,255,255,0.1)); /* Safari 5.1 - 6.0 */
+   			background: -o-linear-gradient(right, rgba(255,255,255,0.1),rgba(255,255,255,0.3),rgba(255,255,255,0.6),rgba(255,255,255,0.3),rgba(255,255,255,0.1)); /* Opera 11.1 - 12.0 */
+    		background: -moz-linear-gradient(right, rgba(255,255,255,0.1),rgba(255,255,255,0.3),rgba(255,255,255,0.6),rgba(255,255,255,0.3),rgba(255,255,255,0.1)); /* Firefox 3.6 - 15 */
+    		background: linear-gradient(to right, rgba(255,255,255,0.1),rgba(255,255,255,0.3),rgba(255,255,255,0.6),rgba(255,255,255,0.3),rgba(255,255,255,0.1)); /* 标准的语法（必须放在最后）*/
+			}
+			
+			#nav .nav_second>i{
+			float:left;
+			width:2px;
+			height:28px;
+			background: -webkit-linear-gradient(rgba(255,255,255,0.1),rgba(255,255,255,0.7),rgba(255,255,255,0.1)); /* Safari 5.1 - 6.0 */
+   			background: -o-linear-gradient(rgba(255,255,255,0.1),rgba(255,255,255,0.7),rgba(255,255,255,0.1)); /* Opera 11.1 - 12.0 */
+    		background: -moz-linear-gradient(rgba(255,255,255,0.1),rgba(255,255,255,0.7),rgba(255,255,255,0.1)); /* Firefox 3.6 - 15 */
+    		background: linear-gradient(rgba(255,255,255,0.1),rgba(255,255,255,0.7),rgba(255,255,255,0.1)); /* 标准的语法（必须放在最后） */
+			
+			}
+			.nav_second li{
+				float:left;
+				width:13.5%;
+				position:relative;
+				}
+			/*小箭头*/
+			.nav_second li.on::before{
+				content:"";
+				border:10px solid black;
+				border-color:transparent transparent rgba(255,255,255,0.5) transparent;
+				position:absolute;
+				bottom:100%;
+				left:40%;
+				}
+			.nav_second li.on a{
+				color:#000;
+				}
+			.nav_second li a{
+				text-decoration:none;
+				color:#fff;
+				font-size:13px;
+				display:block;
+				text-align:center;
+				padding:6px 0;
+				}
+	
+	
+/*横幅*/
+	#banner{
+		width:inherit;
+		}
+		#banner img{
+			width:100%;
+			}
+/*底部*/
+	#footer{
+		width:950px;
+		margin:0 auto;
+		color:#fff;
+		}
+	#footer div{
+		display:inline-block;
+		}
+	#footer input,#footer button{
+		border:1px solid #F7EE34;
+		}
+	#footer input{
+		border-radius:13px 0 0 13px;
+		width:130px;
+		height:25px;
+		padding:1px 20px;
+		background:#EBC87F;
+		color:#6B6150;
+		}
+	#footer button{
+		border-radius:0 13px 13px 0;
+		width:60px;
+		margin-left:-6px;
+		height:29px;
+		background:#C58422;
+		margin-right:40px;
+		color:#F7EE34;
+		}
+	#footer>p{
+		display:inline-block;
+		font-size:12px;
+		margin-left:14px;
+		line-height:60px;
+		}

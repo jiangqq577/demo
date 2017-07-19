@@ -1,0 +1,51 @@
+@charset "utf-8";
+/* CSS Document */
+
+		#con_right{
+			width:70%;
+			float:left;
+			}
+
+		#con_right div{
+			width:44%;
+			float:left;
+			margin:15px 2.5%;
+			box-sizing:border-box;
+			border:3px solid transparent;
+			background-clip:padding-box,border-box;
+			background-origin:padding-box,border-box;
+			background-image:linear-gradient(#fff,#fff),linear-gradient(#DBBB6B,#F0EC90,#EAAF5E,#F1EEA0,#EAAE4E);
+			position:relative;
+			}
+		#con_right a{
+			display:block;
+			margin:5px;
+			}
+		#con_right img{
+			width:100%;
+			}
+		#con_right .con_hide{
+			position:absolute;
+			bottom:5px;
+			left:0;
+			right:0;
+			text-align:center;
+			line-height:25px;
+			background:rgba(255,255,255,0.3);
+			font-size:15px;
+			display:none;
+			text-decoration:none;
+			color:#000;
+			}
+		#con_right div:hover .con_hide{
+			display:block;
+			}	
+			
+		#con_right .fff{
+			padding:11.7% 21%;
+			}	
+		#con_right .fff .con_hide{
+			background:rgba(0,0,0,0.2);
+			bottom:0;
+			display:block;
+			}

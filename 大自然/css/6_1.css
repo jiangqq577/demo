@@ -1,0 +1,62 @@
+@charset "utf-8";
+/* CSS Document */
+		#con_right{
+			width:61%;
+			height:640px;
+			float:left;
+			background:url("../img/con_right_bg.png") no-repeat center center;
+			background-size:100% 100%;
+			padding:10px 6% 0 3%;
+			}
+		#con_right .con_header{
+			width:18px;		
+			float:left;
+			}
+		#con_right h3{
+			line-height:25px;
+			float:left;
+			padding:0 5px;
+			font-size:24px;
+			}
+		#con_right .phone{
+			float:right;
+			line-height:35px;
+			margin-right:-5%;
+			font-size:13px;
+			}
+		#con_right form{
+			clear:both;
+			margin-top:90px;
+			height:500px;
+			overflow-y:auto;
+			}
+			#con_right form span{
+				width:150px;
+				display:inline-block;
+				text-align:right;
+				}
+			#con_right form .txt{
+				width:300px;
+				height:35px;
+				margin:10px 0;
+				}
+			#con_right form textarea{
+				vertical-align:middle;
+				margin:10px 0;
+				min-width:300px;
+				max-width:300px;
+				}
+			#con_right form .radio{
+				margin:10px 0 10px 35px;
+				}
+			#con_right form button{
+				display:block;
+				width:60%;
+				margin:20px auto;
+				height:35px;
+				background:#720000;
+				border:none;
+				color:#fff;
+				font-size:18px;
+				letter-spacing:8px;
+				}

@@ -1,0 +1,254 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>案例鉴赏——欧式风格</title>
+<link rel="stylesheet" href="css/public.css" type="text/css">
+<link rel="stylesheet" href="css/3_2.css" type="text/css"/>
+</head>
+
+<body>
+<div id="box">
+	<img src="img/header_title.png" class="h_title"/>
+    <img src="img/header_text.png" class="h_text"/>
+<!--导航-->
+    <div id="nav">
+    	<div class="nav_img nav_left"><img src="img/nav_bird (2).png" /></div>
+        <div class="nav_img nav_right"><img src="img/nav_bird (1).png" /></div>
+    	<i></i>
+        <span></span>
+        <i></i>
+
+   	<ul class="nav_first">
+        	<i></i>
+        	<li><a href="index.html">首页<p>index</p></a></li>
+            <i></i>
+            <li><a href="1_1.html">品牌中心<p>Brand Centre</p></a></li>
+            <i></i>
+            <li><a href="2_2.html">产品概览<p>Product </p></a></li>
+            <i></i>
+            <li><a href="3_1.html">家装知识<p>Decoration</p></a></li>
+            <i></i>
+            <li class="active"><a href="4_1.html">案例鉴赏<p>Appreciation</p></a></li>
+            <i></i>
+            <li><a href="5_1.html">加盟&amp;服务<p>Join Serve</p></a></li>
+            <i></i>
+            <li><a href="6_2.html">联系我们<p>Contact Us</p></a></li>
+            <i></i>
+        </ul> 
+              
+    </div>
+<!--内容-->
+    <div id="container">
+    	<div id="con_left">
+        	<div class="bg_mask">
+            	<img src="img/logo.png"/>
+                <h2>大自然美学家</h2>
+                <p>——Nature Mxj——</p>
+                <ul>
+                	<li class="con_active"><a href="javascript:;">欧式风格</a></li>
+                    <i></i>
+                    <li><a href="#">美式风格</a></li>
+                    <i></i>
+                    <li><a href="#">法式风格</a></li>
+                    <i></i>
+                    <li><a href="#">中式风格</a></li>
+                    <i></i>
+                    <li><a href="#">其他风格</a></li>
+                    <i></i>
+                </ul>
+            </div>
+        </div>    	
+        <div id="con_right">
+			<div class="big_box" id="boxs">
+            	<div class="box_b">
+                    <img src="img/con_2_2 (6).png" alt="" />
+                    <img src="img/con_2_1 (1).png" alt="" />
+                    <img src="img/con_2_1 (2).png" alt="" />
+                    <img src="img/con_2_1 (3).png" alt="" />
+                    <img src="img/con_2_1 (4).png" alt="" />
+                    <img src="img/con_2_1 (5).png" alt="" />
+                    <img src="img/con_2_1 (6).png" alt="" />
+                    <img src="img/con_2_2 (1).png" alt="" />
+                    <img src="img/con_2_2 (2).png" alt="" />
+                    <img src="img/con_2_2 (3).png" alt="" />
+                    <img src="img/con_2_2 (4).png" alt="" />
+                    <img src="img/con_2_2 (5).png" alt="" />
+                    <img src="img/con_2_2 (6).png" alt="" />
+                    <img src="img/con_2_1 (1).png" alt="" />
+                </div>
+                <div class="box_s">
+                    <div class="box_s_con" style="left:0">
+                            <img src="img/con_2_1 (1).png" alt="" index="0" class="img_light"/>
+                            <img src="img/con_2_1 (2).png" alt="" index="1"/>
+                            <img src="img/con_2_1 (3).png" alt="" index="2"/>
+                            <img src="img/con_2_1 (4).png" alt="" index="3"/>
+                            <img src="img/con_2_1 (5).png" alt="" index="4"/>
+                            <img src="img/con_2_1 (6).png" alt="" index="5"/>
+                            <img src="img/con_2_2 (1).png" alt="" index="6"/>
+                            <img src="img/con_2_2 (2).png" alt="" index="7"/>
+                            <img src="img/con_2_2 (3).png" alt="" index="8"/>
+                            <img src="img/con_2_2 (4).png" alt="" index="9"/>
+                            <img src="img/con_2_2 (5).png" alt="" index="10"/>
+                            <img src="img/con_2_2 (6).png" alt="" index="11"/>
+                    </div>
+                </div>
+                <div class="box_c" id="box_prev"><b>&lt;</b></div>
+                <div class="box_c" id="box_next"><b>&gt;</b></div>   
+            </div>
+     	</div>
+    </div>
+<!--底部版权-->
+    <div id="footer">
+    	<p>统一热线：4000-330-198</p>
+        <p>Copyright @ 1999-2015 福建大自然美学家居 闽ICP备13013534号</p>
+        <p class="footer_right">联系我们 | 在线留言  </p>
+    </div>
+</div>
+<script>
+var box=document.getElementById("boxs");
+var bigBox=document.getElementsByClassName("box_b")[0];
+var s_Box=document.getElementsByClassName("box_s")[0];
+var bigImg=bigBox.getElementsByTagName("img");
+var smallBox=document.getElementsByClassName("box_s_con")[0];
+var smallImg=smallBox.getElementsByTagName("img");
+var prev=document.getElementById("box_prev");
+var next=document.getElementById("box_next");
+var box_c=document.getElementsByClassName("box_c");
+
+
+var index=1;//第几张小图片
+var timer;//计时器
+var n=1; //第几张小图片
+
+box.style.height=parseInt(box.offsetWidth)/4*3+"px"; <!--总容器的高度随宽度变化-->
+s_Box.style.height=parseInt(s_Box.offsetWidth)/7+"px";<!--小图片容器的高度随宽度变化-->
+bigBox.style.left=-parseInt(bigBox.offsetWidth)/14+"px";<!--初始大图片左移一张图片的距-->
+
+
+//点击上下箭头
+next.onclick=function(){
+	//大图移动
+	if(parseInt(bigBox.style.left)>-parseInt(bigBox.offsetWidth)/14*11){
+		bigBox.style.left=parseInt(bigBox.style.left)-parseInt(bigBox.offsetWidth)/14+"px";
+		}
+	//小图移动
+	if(parseInt(smallBox.style.left)>-parseInt(smallBox.offsetWidth)/12*6){
+		smallBox.style.left=parseInt(smallBox.style.left)-parseInt(smallBox.offsetWidth)/12+"px";
+		}
+	//最后一张，不再移动
+	if(index==12){
+		index==12;
+		}else{
+			index+=1;
+			}	
+	img_border();	
+		
+	}
+prev.onclick=function(){
+	//大图移动
+	if(parseInt(bigBox.style.left)<-parseInt(bigBox.offsetWidth)/14){
+		bigBox.style.left=parseInt(bigBox.style.left)+parseInt(bigBox.offsetWidth)/14+"px";
+		}
+	//小图移动
+	if(parseInt(smallBox.style.left)<0){
+		smallBox.style.left=parseInt(smallBox.style.left)+parseInt(smallBox.offsetWidth)/12+"px";		
+		}
+	//第一张，不再移动
+	if(index==1){
+		index==1;
+		}else{
+			index-=1;
+			}	
+	img_border()			
+	}
+	
+
+//显示当前小图片的边框为红色
+var img_border=function(){
+	//清除class  img_light		
+	for(var j=0;j<smallImg.length;j++){
+		if(smallImg[j].className=="img_light"){
+			smallImg[j].className="";			
+			}
+		}
+	//设置第index张小图片的边框为红色，其余的不变色
+	smallImg[index-1].className="img_light";
+	for(var i=0;i<smallImg.length;i++){
+		if(smallImg[i].className=="img_light"){
+			smallImg[i].style.borderColor="#f00";
+			}else{
+				smallImg[i].style.borderColor="#C63";
+				}
+		}
+	}
+
+//大图自动轮播
+var circle=function(){	
+	function go(){	
+		//大图片轮播
+		//大图达最后一张的时候，返回第一张			
+		if(parseInt(bigBox.style.left)<-parseInt(bigBox.offsetWidth)/14*11){
+			bigBox.style.left=0+"px";
+			}
+		var bigleftd=parseInt(bigBox.style.left)-parseInt(bigBox.offsetWidth)/14;	
+		bigBox.style.left=bigleftd+"px";
+		
+		//小图片轮播
+		n++;
+		var smallleftd;
+		smallleftd=parseInt(smallBox.style.left);
+		smallBox.style.left=smallleftd-parseInt(smallBox.offsetWidth)/12+"px";
+		//小图片在第八张的时候不再向左移动
+		if(n>8){
+			smallBox.style.left=-parseInt(smallBox.offsetWidth)/12*7+"px";
+			}
+		//小图片在最后一张的时候，下一步返回第一张
+		if(n>12){
+			smallBox.style.left=0+"px";
+			n=1;
+			}
+		//如果到达最后一张，则返回第一张，不然往后一张		
+		if(index==12){
+			index=1;
+			}else{
+				index+=1;
+				}
+		img_border();	
+		}
+	go();
+	}
+
+//点击小图片
+for(var x=0;x<smallImg.length;x++){
+	smallImg[x].onclick=function(){
+		var imgIndex=parseInt(this.getAttribute("index"));//获取图片的index值
+		index=imgIndex;
+		img_border();  
+		bigBox.style.left=-parseInt(bigBox.offsetWidth)/14*imgIndex+"px"; <!--大图片随之滚动的距离-->
+		n=imgIndex;   
+		circle();
+		}
+	}
+
+
+//计时器，三秒后自动播放 清除计时器
+function play(){
+	timer=setInterval(function(){
+		circle();
+		},3000)
+	}
+function stop(){
+	clearInterval(timer);
+	}
+bigBox.onmouseover=stop;
+bigBox.onmouseout=play;
+smallBox.onmouseover=stop;
+smallBox.onmouseout=play;
+img_border();	
+play();
+
+
+</script>
+</body>
+</html>

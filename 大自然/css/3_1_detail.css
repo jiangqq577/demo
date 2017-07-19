@@ -1,0 +1,60 @@
+@charset "utf-8";
+/* CSS Document */
+
+		#con_right{
+			width:61%;
+			height:640px;
+			float:left;
+			background:url("../img/con_right_bg.png") no-repeat center center;
+			background-size:100% 100%;
+			padding:10px 6% 0 3%;
+			}
+		#con_right .con_header{
+			width:18px;		
+			float:left;
+			}
+		#con_right h3{
+			line-height:25px;
+			float:left;
+			padding:0 5px;
+			font-size:24px;
+			}
+		#con_right .phone{
+			float:right;
+			line-height:35px;
+			margin-right:-5%;
+			font-size:13px;
+			}
+		#con_right div{
+			width:102%;
+			margin-top:80px;
+			overflow-y:auto;
+			height:520px;
+			}
+		#con_right h4{
+			clear:both;
+			text-align:center;
+			font-size:22px;
+			font-weight:normal;
+			margin-left:32px;
+			border-bottom:1px dashed #000;
+			padding-bottom:5px;
+			}
+		#con_right span{
+			display:block;
+			text-align:center;
+			padding:10px 0 5px;
+			border-bottom:1px dashed #000;
+			margin-left:32px;
+			font-size:13px;
+			margin-bottom:10px;
+			}
+				#con_right span i{
+					font-style:normal;
+					margin-right:8px;
+					}
+		#con_right p{
+			text-indent:32px;
+			line-height:180%;
+			font-size:15px;
+			}
