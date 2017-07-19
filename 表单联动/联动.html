@@ -1,0 +1,386 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style>
+#box1{
+	border:1px solid black;
+	border-radius:10px;
+	width:500px;
+	margin:20px auto;
+	}
+	#box1 form{padding:20px;}
+	#box1 span{
+		width:80px;
+		text-align:right;
+		display:inline-block;
+		margin:20px 10px;	
+			
+		}
+	#box1 select{}
+	#box1 select option{}
+#box2{
+	width:500px;
+	margin:0 auto;
+	border:1px solid black;
+	border-radius:10px;
+	}
+	#box2 select{width:100px;margin:20px 25px;}
+	#box2 option{height:30px;line-height:30px;}
+#box3{border:1px solid black;margin:20px auto;width:500px;border-radius:10px;}
+	#box3 select{
+		margin:10px 50px;
+		}
+	#box3 select option{
+		height:30px;
+		}
+#box4{border:1px solid #444;border-radius:10px;width:500px;margin:0 auto 20px;padding:10px 0;}
+	#box4 span{
+		display:inline-block;
+		width:120px;
+		text-align:right;
+		margin:10px -25px 10px 0px;
+		}
+	#box4 input{
+		margin-left:40px;
+		}
+	#box4 select{
+		margin:10px 50px;		
+		}
+	#box4 select option{
+		height:30px;
+		line-height:30px;
+		}
+	#box4 #work{display:none;}
+	#box4 textarea{
+		margin-left:30px;
+		vertical-align:text-top;
+		max-width:360px;
+		}
+</style>
+</head>
+
+<body>
+
+<div id="box1">
+	<form method="" action="" id="forms">
+    	<span>11111111:</span>
+        <select id="one">
+        	<option>————下拉选择————</option>
+            <option>123</option>
+            <option>456</option>
+            <option>789</option>
+        </select>
+        <br/>
+    	<span>2:</span>
+        <select id="two">
+        	<option>————下拉选择————</option>
+        </select>        
+    </form>
+</div>
+
+<div id="box2">
+	<select id="year">
+    	<option>年</option>
+    </select>
+    <select id="month">
+    	<option>月</option>
+    </select>
+    <select id="days">
+    	<option>日</option>
+    </select>
+</div>
+<div id="box3">
+	<select id="sheng">
+    	<option>————省份————</option>
+    </select>
+    <select id="shi">
+    	<option>————城市————</option>
+    </select>
+    <select id="xian">
+    	<option>————区/县城————</option>
+    </select>
+</div>
+<div id="box4">
+	<span>性别：</span>
+    <input type="radio" value="男" name="sex"/>男
+    <input type="radio" value="女" name="sex"/>女
+    <br />
+    <span>是否在校：</span>
+    <input type="radio" name="job" id="scl"/>
+    <label for="scl">在校生</label>
+    <input type="radio" name="job" id="wor"/>
+    <label for="wor">非在校生</label>
+    <br />
+	<select id="school">
+    	<option>————选择所在学校————</option>
+    </select>
+    <select id="great">
+    	<option>————选择所在年级————</option>
+    </select>
+    <select id="class">
+    	<option>————选择所在班级————</option>
+    </select>
+    <div id="work">
+        <span>职业描述：</span>
+        <textarea></textarea>
+    </div>
+</div>
+<script>
+var $=function(id){
+	return document.getElementById(id);
+	}
+//box1  二级联动
+var forms=$("forms");
+var select_1=$("one");
+var select_2=$("two");
+
+select_1.onchange=select_change;
+
+function select_change(){
+	var two_box=[
+					[111,111,222,222,333],
+					[444,444,555,666],
+					[99999999,77,5555557,8888,444,555,444]
+				];
+	
+	var end_option=two_box[select_1.selectedIndex-1];
+	
+	select_2.length=1;
+	
+	for(var i=0;i<end_option.length;i++){
+		select_2[i+1]=new Option(end_option[i],end_option[i]);
+		}
+	
+	}
+
+
+
+//box2	三级联动——日期
+var years=$("year");
+var months=$("month");
+var days=$("days");
+
+//创建日期
+function createDate(){
+	for(var i=2017;i>1917;i--){
+		var option1=document.createElement('option');
+		option1.setAttribute("value",i);
+		option1.innerHTML=i;
+		years.appendChild(option1);
+		}
+	for(var j=1;j<13;j++){
+		var option2=document.createElement("option");
+		option2.innerHTML=j;
+		option2.setAttribute("value",j);
+		months.appendChild(option2);
+		}
+	for(var m=1;m<32;m++){
+		var option3=document.createElement('option');
+		option3.innerHTML=m;
+		option3.setAttribute("value",m);
+		days.appendChild(option3);
+		}
+	}
+createDate();	
+	
+var num;
+years.onclick=function(){
+	months.options[0].selected=true;
+	days.options[0].selected=true;
+	}	
+months.onclick=function(){
+	days.options[0].selected=true;
+	//2月天数
+	if(months.value==2){
+		if(years.value%4===0&&years.value%100!==0||years.value%400===0){
+			num=29;
+			}else{
+				num=28;
+				}
+		}
+	//大月小月天数
+	else if(months.value==1||months.value==3||months.value==5||month.value==7||months.value==8||months.value==10||months.value==12){
+		num=31;
+		}else{
+			num=30;
+			}
+	//增删天数
+	if(num==28){
+		//先删除第32个（index=31），再删除第31个（index=30），最后删除第30个(index=29)
+		days.remove(31);
+		days.remove(30);
+		days.remove(29);
+		}
+	if(num==29){
+		adds();
+		days.remove(31);
+		days.remove(30);
+		}
+	if(num==30){
+		adds();
+		days.remove(31);
+		}
+	if(num==31){
+		console.log("fsr");
+		adds();
+		}
+	//若日期已被删除，补上
+	function adds(){
+		if(!days.options[29]){
+			days.options.add(new Option("29","29"));
+			}
+		if(!days.options[30]){
+			days.options.add(new Option("30","30"));
+			}
+		if(!days.options[31]){
+			days.options.add(new Option("31","31"));
+			}
+		}				
+		
+	}
+
+
+
+//box3 三级联动——城市
+var sheng=$("sheng");
+var shi=$("shi");
+var xian=$("xian");
+//定义省份、城市、区的地址名称
+var option_s=["m","s","d"];
+var s1=[
+			["m1","m2","m3","m4","m5"],["s1","s2"],["d1","d2","d3"]
+		];
+var x1=[
+			["m11","m12","m13","m14"],["m21","m22","m23","m24"],["m31","m32"],["m41","m42","m43"],["m51"]	
+		];
+var x2=[
+			["s11","s12","s13","s14"],["s21","s22","s23","s24","s25","s26"]
+		];
+var x3=[
+			["d11","d12","d13"],["d21","d22","d23","d24","d25"],["d31","d32","d33","d34"]
+		];
+
+//赋值省份
+for(var y=0;y<option_s.length;y++){
+	var op=document.createElement("option");
+	op.innerHTML=option_s[y];
+	sheng.appendChild(op);
+	}
+
+//所选省份对应的城市
+function p(){		
+	var selectShi=s1[sheng.selectedIndex-1];
+	shi.length=1;
+	for(var i=0;i<selectShi.length;i++){
+		shi[i+1]=new Option(selectShi[i],selectShi[i]);
+		}					
+	}
+//所选城市对应的区/县城
+function m(){
+	//选取第一个省份时			
+	if(sheng.selectedIndex==1){
+		var selectXian1=x1[shi.selectedIndex-1];
+		xian.length=1;
+		for(var j=0;j<selectXian1.length;j++){
+			xian[j+1]=new Option(selectXian1[j],selectXian1[j]);
+			}
+		}
+	//选取第二个省份时	
+	if(sheng.selectedIndex==2){
+		var selectXian2=x2[shi.selectedIndex-1];
+		xian.length=1;
+		for(var r=0;r<selectXian2.length;r++){
+			xian[r+1]=new Option(selectXian2[r],selectXian2[r]);
+			}
+		}	
+	//选取第三个省份时	
+	if(sheng.selectedIndex==3){
+		var selectXian3=x3[shi.selectedIndex-1];
+		xian.length=1;
+		for(var t=0;t<selectXian3.length;t++){
+			xian[t+1]=new Option(selectXian3[t],selectXian3[t]);
+			}
+		}					
+	}	
+sheng.onchange=p;
+shi.onchange=m;
+
+
+
+//box4
+var box4=$("box4");
+var radio_scl=$("scl");
+var radio_wor=$("wor");
+var school=$("school");
+var great=$("great");
+var cla=$("class");
+var work=$("work");
+
+function show_select(){
+	school.style.display="block";
+	great.style.display="block";
+	cla.style.display="block";
+	work.style.display="none";
+	}
+function show_textarea(){
+	school.style.display="none";
+	great.style.display="none";
+	cla.style.display="none";
+	work.style.display="block";
+	}
+var s=["m","x","b"];
+var g=[["m1","m2","m3"],["x1","x2","x3"],["b1","b2","b3"]];
+var cm=[["m11","m12","m13","m14","m15","m16"],["m21","m22","m23"],["m31","m32","m33","m34"]];
+var cx=[["x11","x12"],["x21","x22","x23"],["x31"]];
+var cb=[["b11","b12","b13","b14"],["b21","b22"],["b31","b32","b33"]];
+function show_sc(){
+	for(var i=0;i<s.length;i++){
+		var school_op=document.createElement("option");	
+		school_op.innerHTML=s[i];
+		school.appendChild(school_op);
+		}
+	school.onchange=show_gr;
+	function show_gr(){
+		var great_op=g[school.selectedIndex-1];
+		great.length=1;
+		for(var j=0;j<great_op.length;j++){
+			great[j+1]=new Option(great_op[j],great_op[j]);
+			}
+		great.onchange=show_cl;
+		function show_cl(){
+			if(school.selectedIndex==1){
+				var class_op1=cm[great.selectedIndex-1];
+				cla.length=1;
+				for(var p=0;p<class_op1.length;p++){
+					cla[p+1]=new Option(class_op1[p],class_op1[p]);
+					}
+				}
+			if(school.selectedIndex==2){
+				var class_op2=cx[great.selectedIndex-1];
+				cla.length=1;
+				for(var u=0;u<class_op2.length;u++){
+					cla[u+1]=new Option(class_op2[u],class_op2[u]);
+					}
+				}
+			if(school.selectedIndex==3){
+				var class_op3=cb[great.selectedIndex-1];
+				cla.length=1;
+				for(var y=0;y<class_op3.length;y++){
+					cla[y+1]=new Option(class_op3[y],class_op3[y]);
+					}
+				}
+			}				
+		}
+	}
+
+function all(){
+	radio_scl.onclick=show_select;
+	radio_wor.onclick=show_textarea;
+	show_sc();
+	}
+all();
+</script>
+</body>
+</html>
